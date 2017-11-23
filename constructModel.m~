@@ -1,0 +1,11 @@
+function [Model]=constructModel(model)
+for i=1:1:length(model)
+    word = model{i};
+    for i2:1:length(word)
+        total = 0;
+        count = 0;
+        for length(word)
+            total = word()
+        end
+    end
+end
