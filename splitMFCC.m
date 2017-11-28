@@ -1,3 +1,4 @@
+%Author: Matthew Mansell
 function [MFCCcollection]=splitMFCC(MFCCarr, Enarr, threshold)
 MFCCcollection = {2,2,2}; %Return array
 indx = 1;
@@ -7,7 +8,7 @@ while indx < length(Enarr)
     if(Enarr(indx) > threshold)
         word = word + 1;
         wordLength = 1;
-        %find the length of the wordx
+        %find the length of the word
         while(Enarr(indx + wordLength) > threshold && (indx+wordLength) < length(Enarr))
             wordLength = wordLength + 1;
         end

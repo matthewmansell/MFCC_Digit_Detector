@@ -47,7 +47,7 @@ EnarrFiltered = filter(kernel,1,Enarr);
 
 MFCCmodel9 = splitMFCC(MFCCarr, EnarrFiltered, 0.05);
 
-
+MFCCmodel9Avgs = constructModel(MFCCmodel9);
 
 %Now let's visualise everything
 subplot(2,1,1)
