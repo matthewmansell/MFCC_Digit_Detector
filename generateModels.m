@@ -10,6 +10,9 @@ mfccModel7 = extract_mfccs('digit7.wav');
 mfccModel8 = extract_mfccs('digit8.wav');
 mfccModel9 = extract_mfccs('digit9.wav');
 
+
+
+
 mfccModel0Avg = constructModel(mfccModel0);
 mfccModel1Avg = constructModel(mfccModel1);
 mfccModel2Avg = constructModel(mfccModel2);
