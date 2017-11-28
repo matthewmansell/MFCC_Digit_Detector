@@ -1,5 +1,5 @@
+function mfccModel = extract_mfccs(file)
 %MFCC extractor
-file='digit9.wav';
 [speech,fs]=audioread(file);
 
 %check if it is stereo or not by looking for the minimum dimension of the
@@ -45,21 +45,24 @@ end
 kernel = ones(20,1);
 EnarrFiltered = filter(kernel,1,Enarr);
 
-MFCCmodel9 = splitMFCC(MFCCarr, EnarrFiltered, 0.05);
+mfccModel = splitMFCC(MFCCarr, EnarrFiltered, 0.05);
 
-MFCCmodel9Avgs = constructModel(MFCCmodel9);
+end
+%MFCCmodel1Avgs = constructModel(MFCCmodel1);
+
+%similarity = compareArrays(MFCCmodel9Avgs, MFCCmodel9Avgs);
 
 %Now let's visualise everything
-subplot(2,1,1)
-imagesc(flipud(MFCCarr'))
+%subplot(2,1,1)
+%imagesc(flipud(MFCCarr'))
 %subplot(4,1,2)
 %plot(speech);axis tight
 %subplot(2,1,1)
 %plot(Enarr(250:550))
 %plot(1:length(Enarr),Enarr/max(Enarr),'r');axis tight
-subplot(2,1,2)
+%subplot(2,1,2)
 %plot(EnarrFiltered(250:550))
-plot(1:length(EnarrFiltered),EnarrFiltered/max(EnarrFiltered),'r');axis tight
+%plot(1:length(EnarrFiltered),EnarrFiltered/max(EnarrFiltered),'r');axis tight
 
 %Save everything *EXCEPT* the main waveform
 %save([file,'_VariableDump.mat'],'MFCCarr','Enarr','fs','Ns','frame10ms','M','N');
