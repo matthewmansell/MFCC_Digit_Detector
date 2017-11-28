@@ -17,4 +17,5 @@ while indx < length(Enarr)
     end
     indx = indx + 1;
 end
+end
 
