@@ -30,7 +30,9 @@ for modelNo=0:1:9
         for i2=1:1:length(mapModel)
             newModel(i2) = model(mapY(i2));
         end
+        
         model(i) = newModel;
+     
     end
     
     %average words
