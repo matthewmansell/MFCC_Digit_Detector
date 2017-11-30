@@ -21,10 +21,4 @@ digit7Mean = meanMfcc(mfccDigit7);
 digit8Mean = meanMfcc(mfccDigit8);
 digit9Mean = meanMfcc(mfccDigit9);
 
-subplot(2,1,1)
-imagesc(flipud(cell2mat(mfccDigit5(5))'))
-subplot(2,1,2)
-imagesc(flipud(digit5Mean'))
-
-
 %surf(cell2mat(mfccModel0(5)))

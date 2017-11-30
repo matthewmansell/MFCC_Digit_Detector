@@ -4,7 +4,7 @@
 
 
 input = extract_mfccs('newTestData(245361).wav');
-%input = splitMFCC(MFCCarr, Enarr, 0.075);
+%input = splitMFCC(MFCCarr, Enarr, 0.06);
 
 pin = '';
 %compare against model
