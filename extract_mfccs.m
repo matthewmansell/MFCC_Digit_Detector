@@ -41,11 +41,7 @@ for indx=1:frame10ms:Ns-frame20ms
     Enarr=[Enarr;sum(seg.*seg)];
 end
 
-%smooth enarr using a moving average filter
-kernel = ones(20,1);
-EnarrFiltered = filter(kernel,1,Enarr);
-
-mfccModel = splitMFCC(MFCCarr, EnarrFiltered, 0.05);
+mfccModel = splitMFCC(MFCCarr, Enarr, 0.05);
 
 end
 %MFCCmodel1Avgs = constructModel(MFCCmodel1);

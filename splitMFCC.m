@@ -1,15 +1,20 @@
 %Author: Matthew Mansell
 function [MFCCcollection]=splitMFCC(MFCCarr, Enarr, threshold)
+
+kernel = ones(17,1);
+EnarrFiltered = filter(kernel,1,Enarr);
+
+
 MFCCcollection = {2,2,2}; %Return array
 indx = 1;
 word = 0;
-while indx < length(Enarr)
+while indx < length(EnarrFiltered)
     %loop until word detected
-    if(Enarr(indx) > threshold)
+    if(EnarrFiltered(indx) > threshold)
         word = word + 1;
         wordLength = 1;
         %find the length of the word
-        while(Enarr(indx + wordLength) > threshold && (indx+wordLength) < length(Enarr))
+        while(EnarrFiltered(indx + wordLength) > threshold && (indx+wordLength) < length(EnarrFiltered))
             wordLength = wordLength + 1;
         end
         MFCCcollection{word} = MFCCarr(indx:(indx+wordLength),1:12);

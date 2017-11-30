@@ -3,7 +3,7 @@
 %outputting the closest match.
 
 
-input = extract_mfccs('newTestData(245361).wav');
+input = extract_mfccs('Example');
 %input = splitMFCC(MFCCarr, Enarr, 0.075);
 
 pin = '';
@@ -16,8 +16,8 @@ for i=1:1:length(input)
     fit = 0;
     for model=0:1:9
         mfccModel = eval(sprintf('%s%d%s', 'digit', model, 'Mean'));
-        similarity = dtw(mfccModel.', digit.');
-        %similarity = compareArrays(mfccModel, digit);
+        %similarity = dtw(mfccModel.', digit.');
+        similarity = compareArrays(mfccModel, digit);
         if similarity < best
             best = similarity;
             fit = model;
