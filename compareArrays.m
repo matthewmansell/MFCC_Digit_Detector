@@ -7,7 +7,7 @@ function similarity=compareArrays(digitModel, input)
 %    newInput(i) = input(mapInput(i));
 %end
 
-inputResized = imresize(input, [length(digitModel) 12]);
+inputResized = imresize(input, [length(digitModel) 12], 'nearest');
 
 similarity = immse(digitModel, inputResized) + dist;
 end

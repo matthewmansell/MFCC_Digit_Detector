@@ -11,7 +11,7 @@ function digitMean = meanMfcc(digitCells)
     %map each word to the largest word size
     for i=1:1:length(digitCells)
         mfcc = cell2mat(digitCells(i));
-        digitCells{i} = imresize(mfcc, [length(cell2mat(digitCells(largest))) 12]);
+        digitCells{i} = imresize(mfcc, [length(cell2mat(digitCells(largest))) 12], 'nearest');
         
         
         %[dist, mapX, mapY] = dtw(cell2mat(digitCells(largest)).', cell2mat(digitCells(i)).');
