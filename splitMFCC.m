@@ -1,7 +1,7 @@
 %Author: Matthew Mansell
 function [MFCCcollection]=splitMFCC(MFCCarr, Enarr, threshold)
 
-kernel = ones(16,1);
+kernel = ones(20,1);
 EnarrFiltered = filter(kernel,1,Enarr);
 
 
