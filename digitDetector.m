@@ -2,9 +2,8 @@
 %Tests an input audio file/MFCC data againts the model,
 %outputting the closest match.
 
-
-input = extract_mfccs('newTestData(245361).wav');
-%input = splitMFCC(MFCCarr, Enarr, 0.06);
+input = extract_mfccs('newTestData(245361).wav'); %Use this for audio input
+%input = splitMFCC(MFCCarr, Enarr, 0.06); %Use this for MFCCarr & Enarr input
 
 pin = '';
 %compare against model
@@ -16,8 +15,8 @@ for i=1:1:length(input)
     fit = 0;
     for model=0:1:9
         mfccModel = eval(sprintf('%s%d%s', 'digit', model, 'Mean'));
-        similarity = dtw(mfccModel.', digit.');
-        %similarity = compareArrays(mfccModel, digit);
+        %similarity = dtw(mfccModel.', digit.');
+        similarity = compareArrays(mfccModel, digit);
         if similarity < best
             best = similarity;
             fit = model;

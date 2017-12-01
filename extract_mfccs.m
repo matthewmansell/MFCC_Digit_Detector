@@ -41,7 +41,7 @@ for indx=1:frame10ms:Ns-frame20ms
     Enarr=[Enarr;sum(seg.*seg)];
 end
 
-mfccModel = splitMFCC(MFCCarr, Enarr, 0.075);
+mfccModel = splitMFCC(MFCCarr, Enarr, 0.065);
 
 end
 %MFCCmodel1Avgs = constructModel(MFCCmodel1);
