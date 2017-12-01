@@ -9,5 +9,5 @@ function similarity=compareArrays(digitModel, input)
 
 inputResized = imresize(input, [length(digitModel) 12]);
 
-similarity = immse(digitModel, inputResized) * dist;
+similarity = immse(digitModel, inputResized) + dist;
 end

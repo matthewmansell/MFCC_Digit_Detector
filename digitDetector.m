@@ -2,7 +2,7 @@
 %Tests an input audio file/MFCC data againts the model,
 %outputting the closest match.
 
-input = extract_mfccs('newTestData(245361).wav'); %Use this for audio input
+input = extract_mfccs('ExamplePIN.wav'); %Use this for audio input
 %input = splitMFCC(MFCCarr, Enarr, 0.06); %Use this for MFCCarr & Enarr input
 
 pin = '';
