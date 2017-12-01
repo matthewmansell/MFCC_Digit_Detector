@@ -21,4 +21,4 @@ digit7Mean = meanMfcc(mfccDigit7);
 digit8Mean = meanMfcc(mfccDigit8);
 digit9Mean = meanMfcc(mfccDigit9);
 
-%surf(cell2mat(mfccModel0(5)))
+surf(cell2mat(mfccModel0(5)))
