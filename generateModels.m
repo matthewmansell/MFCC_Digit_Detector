@@ -1,31 +1,28 @@
 %Generate models for all training data
-digit0mfccs = extract_mfccs('digit0.wav');
-digit1mfccs = extract_mfccs('digit1.wav');
-digit2mfccs = extract_mfccs('digit2.wav');
-digit3mfccs = extract_mfccs('digit3.wav');
-digit4mfccs = extract_mfccs('digit4.wav');
-digit5mfccs = extract_mfccs('digit5.wav');
-digit6mfccs = extract_mfccs('digit6.wav');
-digit7mfccs = extract_mfccs('digit7.wav');
-digit8mfccs = extract_mfccs('digit8.wav');
-digit9mfccs = extract_mfccs('digit9.wav');
+digit0mfccs = extract_mfccs('digit0(cleaned).wav');
+digit1mfccs = extract_mfccs('digit1(cleaned).wav');
+digit2mfccs = extract_mfccs('digit2(cleaned).wav');
+digit3mfccs = extract_mfccs('digit3(cleaned).wav');
+digit4mfccs = extract_mfccs('digit4(cleaned).wav');
+digit5mfccs = extract_mfccs('digit5(cleaned).wav');
+digit6mfccs = extract_mfccs('digit6(cleaned).wav');
+digit7mfccs = extract_mfccs('digit7(cleaned).wav');
+digit8mfccs = extract_mfccs('digit8(cleaned).wav');
+digit9mfccs = extract_mfccs('digit9(cleaned).wav');
 
-digit0avgs = avgMfccs(digit0mfccs).';
-digit1avgs = avgMfccs(digit1mfccs).';
-digit2avgs = avgMfccs(digit2mfccs).';
-digit3avgs = avgMfccs(digit3mfccs).';
-digit4avgs = avgMfccs(digit4mfccs).';
-digit5avgs = avgMfccs(digit5mfccs).';
-digit6avgs = avgMfccs(digit6mfccs).';
-digit7avgs = avgMfccs(digit7mfccs).';
-digit8avgs = avgMfccs(digit8mfccs).';
-digit9avgs = avgMfccs(digit9mfccs).';
+%Generate the averaged word data
+digit0avgs = mfcc3pointmodel(digit0mfccs);
+digit1avgs = mfcc3pointmodel(digit1mfccs);
+digit2avgs = mfcc3pointmodel(digit2mfccs);
+digit3avgs = mfcc3pointmodel(digit3mfccs);
+digit4avgs = mfcc3pointmodel(digit4mfccs);
+digit5avgs = mfcc3pointmodel(digit5mfccs);
+digit6avgs = mfcc3pointmodel(digit6mfccs);
+digit7avgs = mfcc3pointmodel(digit7mfccs);
+digit8avgs = mfcc3pointmodel(digit8mfccs);
+digit9avgs = mfcc3pointmodel(digit9mfccs);
 
-
-%scatX = [digit0avgs(1,:) digit1avgs(1,:) digit2avgs(1,:)];
-%scatY = [digit0avgs(2,:) digit1avgs(2,:) digit2avgs(2,:)];
-%scatZ = [digit0avgs(3,:) digit1avgs(3,:) digit2avgs(3,:)];
-
+%Display the 3 point classification scatter
 hold on;
 scatter3(digit0avgs(1,:), digit0avgs(2,:), digit0avgs(3,:), 'MarkerEdgeColor', 'k', 'MarkerFaceColor', [1 0 0]);
 scatter3(digit1avgs(1,:), digit1avgs(2,:), digit1avgs(3,:), 'MarkerEdgeColor', 'k', 'MarkerFaceColor', [0 1 0]);
@@ -38,16 +35,3 @@ scatter3(digit7avgs(1,:), digit7avgs(2,:), digit7avgs(3,:), 'MarkerEdgeColor', '
 scatter3(digit8avgs(1,:), digit8avgs(2,:), digit8avgs(3,:), 'MarkerEdgeColor', 'k', 'MarkerFaceColor', [0 0 0.5]);
 scatter3(digit9avgs(1,:), digit9avgs(2,:), digit9avgs(3,:), 'MarkerEdgeColor', 'k', 'MarkerFaceColor', [0.5 0.5 0]);
 hold off;
-
-%digit0Mean = meanMfcc(mfccDigit0);
-%digit1Mean = meanMfcc(mfccDigit1);
-%digit2Mean = meanMfcc(mfccDigit2);
-%digit3Mean = meanMfcc(mfccDigit3);
-%digit4Mean = meanMfcc(mfccDigit4);
-%digit5Mean = meanMfcc(mfccDigit5);
-%digit6Mean = meanMfcc(mfccDigit6);
-%digit7Mean = meanMfcc(mfccDigit7);
-%digit8Mean = meanMfcc(mfccDigit8);
-%digit9Mean = meanMfcc(mfccDigit9);
-
-%surf(cell2mat(mfccModel0(5)))
