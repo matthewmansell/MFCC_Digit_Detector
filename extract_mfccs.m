@@ -41,25 +41,6 @@ for indx=1:frame10ms:Ns-frame20ms
     Enarr=[Enarr;sum(seg.*seg)];
 end
 
-mfccModel = splitMFCC(MFCCarr, Enarr, 0.075);
+mfccModel = splitMFCC(MFCCarr, Enarr, 0.05); %Split the mfcc data into words
 
 end
-%MFCCmodel1Avgs = constructModel(MFCCmodel1);
-
-%similarity = compareArrays(MFCCmodel9Avgs, MFCCmodel9Avgs);
-
-%Now let's visualise everything
-%subplot(2,1,1)
-%imagesc(flipud(MFCCarr'))
-%subplot(4,1,2)
-%plot(speech);axis tight
-%subplot(2,1,1)
-%plot(Enarr(250:550))
-%plot(1:length(Enarr),Enarr/max(Enarr),'r');axis tight
-%subplot(2,1,2)
-%plot(EnarrFiltered(250:550))
-%plot(1:length(EnarrFiltered),EnarrFiltered/max(EnarrFiltered),'r');axis tight
-
-%Save everything *EXCEPT* the main waveform
-%save([file,'_VariableDump.mat'],'MFCCarr','Enarr','fs','Ns','frame10ms','M','N');
-%print([file,'_figure.pdf'],'-dpdf')
