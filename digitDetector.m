@@ -3,13 +3,13 @@
 %outputting the closest match.
 
 %Get input word MFCCs
-input = extract_mfccs('ExamplePIN.wav'); %Use this for audio input
-%input = splitMFCC(MFCCarr, Enarr, 0.075); %Use this for MFCCarr & Enarr input
-
+input = extract_mfccs('ExamplePIN.wav'); %!Use this for audio input!, splitMFCC is included
+%input = splitMFCC(MFCCarr, Enarr, 0.075); %!Use this for MFCCarr & Enarr input!
 
 inputavgs = mfcc3pointmodel(input).'; %Average the mfcc data for the inputs
+
 pin = ''; %Store for the pin
-%Compare against model
+%Compare each word against each model
 for i=1:1:length(inputavgs.')
     inputDigit = inputavgs(i,:);
     closest = 0;
@@ -26,4 +26,4 @@ for i=1:1:length(inputavgs.')
     end
     pin = sprintf('%s%d%s', pin, closest, ', '); %Concat the pin
 end
-
+pin %Write the pin to the cmd window.

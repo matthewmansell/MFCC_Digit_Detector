@@ -1,14 +1,14 @@
 %Generate models for all training data
-digit0mfccs = extract_mfccs('digit0(cleaned).wav');
-digit1mfccs = extract_mfccs('digit1(cleaned).wav');
-digit2mfccs = extract_mfccs('digit2(cleaned).wav');
-digit3mfccs = extract_mfccs('digit3(cleaned).wav');
-digit4mfccs = extract_mfccs('digit4(cleaned).wav');
-digit5mfccs = extract_mfccs('digit5(cleaned).wav');
-digit6mfccs = extract_mfccs('digit6(cleaned).wav');
-digit7mfccs = extract_mfccs('digit7(cleaned).wav');
-digit8mfccs = extract_mfccs('digit8(cleaned).wav');
-digit9mfccs = extract_mfccs('digit9(cleaned).wav');
+digit0mfccs = extract_mfccs('digit0.wav');
+digit1mfccs = extract_mfccs('digit1.wav');
+digit2mfccs = extract_mfccs('digit2.wav');
+digit3mfccs = extract_mfccs('digit3.wav');
+digit4mfccs = extract_mfccs('digit4.wav');
+digit5mfccs = extract_mfccs('digit5.wav');
+digit6mfccs = extract_mfccs('digit6.wav');
+digit7mfccs = extract_mfccs('digit7.wav');
+digit8mfccs = extract_mfccs('digit8.wav');
+digit9mfccs = extract_mfccs('digit9.wav');
 
 %Generate the averaged word data
 digit0avgs = mfcc3pointmodel(digit0mfccs);
