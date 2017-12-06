@@ -1,14 +1,14 @@
 %Generate models for all training data
-mfccDigit0 = extract_mfccs('digit0(cleaned).wav');
-mfccDigit1 = extract_mfccs('digit1(cleaned).wav');
-mfccDigit2 = extract_mfccs('digit2(cleaned).wav');
-mfccDigit3 = extract_mfccs('digit3(cleaned).wav');
-mfccDigit4 = extract_mfccs('digit4(cleaned).wav');
-mfccDigit5 = extract_mfccs('digit5(cleaned).wav');
-mfccDigit6 = extract_mfccs('digit6(cleaned).wav');
-mfccDigit7 = extract_mfccs('digit7(cleaned).wav');
-mfccDigit8 = extract_mfccs('digit8(cleaned).wav');
-mfccDigit9 = extract_mfccs('digit9(cleaned).wav');
+mfccDigit0 = extract_mfccs('digit0.wav');
+mfccDigit1 = extract_mfccs('digit1.wav');
+mfccDigit2 = extract_mfccs('digit2.wav');
+mfccDigit3 = extract_mfccs('digit3.wav');
+mfccDigit4 = extract_mfccs('digit4.wav');
+mfccDigit5 = extract_mfccs('digit5.wav');
+mfccDigit6 = extract_mfccs('digit6.wav');
+mfccDigit7 = extract_mfccs('digit7.wav');
+mfccDigit8 = extract_mfccs('digit8.wav');
+mfccDigit9 = extract_mfccs('digit9.wav');
 
 digit0Mean = meanMfcc(mfccDigit0);
 digit1Mean = meanMfcc(mfccDigit1);

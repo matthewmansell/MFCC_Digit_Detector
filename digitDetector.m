@@ -13,8 +13,8 @@ for i=1:1:length(input)
     fit = 0; %Holder of current best model fit
     for model=0:1:9
         mfccModel = eval(sprintf('%s%d%s', 'digit', model, 'Mean'));
-        %difference = dtw(mfccModel.', digit.'); %!Use this for dynamic time warping compare!
-        difference = compareArrays(mfccModel, digit); %!Use this for mean squared error compare!
+        %difference = dtw(mfccModel.', digit.'); %!Use this for dynamic time warping comparison!
+        difference = compareArrays(mfccModel, digit); %!Use this for mean squared error comparison!
         if difference < best %closer than current best?
             best = difference;
             fit = model;
