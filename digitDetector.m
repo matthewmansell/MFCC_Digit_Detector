@@ -1,4 +1,4 @@
-%Author: Matthew Mansell
+%Author: Matthew Mansell (mcm36)
 %Tests an input audio file/MFCC data against the each model,
 %outputting the closest match.
 
