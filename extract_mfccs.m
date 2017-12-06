@@ -1,4 +1,5 @@
 function mfccModel = extract_mfccs(file)
+%Author: Ian McLoughlin
 %MFCC extractor
 [speech,fs]=audioread(file);
 
@@ -41,6 +42,6 @@ for indx=1:frame10ms:Ns-frame20ms
     Enarr=[Enarr;sum(seg.*seg)];
 end
 
-mfccModel = splitMFCC(MFCCarr, Enarr, 0.05); %Split the mfcc data into words
+mfccModel = splitMFCC(MFCCarr, Enarr, 0.05); %Split the mfcc data into words (edit: mcm36)
 
 end

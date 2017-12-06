@@ -1,3 +1,5 @@
+%Author: Ian McLoughlin
+%Source: Speech and Audio Processing: A MATLAB-based Approach (pg135)
 function cc=mfcc_model(seg, N, M, Fs)
 % Do FFT of audio frame seg, map to M MFCCs
 % from 0 Hz to Fs/2 Hz, using N filterbanks

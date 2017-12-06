@@ -1,3 +1,5 @@
+%Author: Ian McLoughlin
+%Source: Speech and Audio Processing: A MATLAB-based Approach (pg127)
 function band=spread_mel(hz_points,hz_c,hz_size,hz_max)
 %hz_array is the array spaced in hz
 %hz_c is the current index

@@ -1,3 +1,4 @@
+%Author: Matthew Mansell (mcm36)
 %Generate models for all training data
 mfccDigit0 = extract_mfccs('digit0.wav');
 mfccDigit1 = extract_mfccs('digit1.wav');
