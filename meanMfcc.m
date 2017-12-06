@@ -1,4 +1,3 @@
-%Author Matthew Mansell (mcm36)
 function digitMean = meanMfcc(digitCells)
     %find largest model
     largest = 1;
