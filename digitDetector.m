@@ -22,4 +22,4 @@ for i=1:1:length(input)
     end
     pin = sprintf('%s%d%s', pin, fit, ', '); %Concat to PIN
 end
-
+pin
